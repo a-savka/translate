@@ -1,0 +1,54 @@
+
+<div id="testingApp" ng-controller="MainCtrl" ng-init="backMode=<%- backMode %>">
+
+    <div ng-show="!testingCompleted()" class="ng-hide">
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <span ng-bind="index+1"></span>.&nbsp;
+                <span ng-bind="getCurrentText()"></span>
+                <div class="pull-right">
+                    <span ng-class="getLabelClass()">Correct answers: <span ng-bind="correctAnswers"></span></span>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="form-group">
+
+                    <div ng-repeat="answer in answers" ng-class="getAnswerClass(answer)">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="answer" ng-disabled="isInState('A')" ng-click="setCorrect(answer.correct)"> <span ng-bind="answer.text"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <button type="button" class="btn btn-success" ng-click="doAnswer()" ng-disabled="!anyOptionSelected()" ng-show="isInState('Q')">
+                    <i class="fa fa-check"></i> Answer
+                </button>
+                <button type="button" class="btn btn-success" ng-click="goNext()" ng-disabled="false" ng-show="isInState('A')">
+                    Continue <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div ng-show="testingCompleted()" class="ng-hide">
+
+        <p>Test Completed!</p>
+        <p>
+            Total questions: <span ng-bind="index"></span>. Correct answers: <span ng-bind="correctAnswers"></span>
+        </p>
+
+    </div>
+
+
+
+</div>

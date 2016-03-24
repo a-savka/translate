@@ -1,0 +1,1 @@
+angular.bootstrap().invoke(["$http","$q",function(t,n){preloads=[],preloads.push(t.get("/api/testing/config").then(function(t){console.log(t)}))}]);var app=angular.module("testing",["ngAnimate","ui.bootstrap"]);app.controller("MainCtrl",["testingService",function(t){}]);

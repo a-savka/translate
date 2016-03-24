@@ -1,0 +1,46 @@
+body {
+  padding: 50px 20px 40px 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.main_container {
+  max-width: 800px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.translation_source {
+  overflow: hidden;
+  min-height: 40px;
+  font-weight: bold;
+}
+
+.translation_result {
+  overflow: hidden;
+  min-height: 25px;
+  padding-top: 6px;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+.recent_translations {
+  margin-top: 30px;
+}
+
+.no-bottom-marging {
+  margin-bottom: 0 !important;
+}
+
+.list-table tr:first-child td {
+  border: none !important;
+}

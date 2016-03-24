@@ -1,0 +1,7 @@
+<div class="input-group has-success">
+    <span class="input-group-addon">Translate:</span>
+    <input class="form-control user_phone_name" type="text" placeholder="Enter text to translate here..." ng-model="source.text">
+    <span class="input-group-btn">
+      <button class="btn btn-success btn_save" type="button" ng-click="translate()" ng-disabled="!canTranslate()"><i ng-class="getTranslateIconClass()"></i>&nbsp;Translate</button>
+    </span>
+</div>

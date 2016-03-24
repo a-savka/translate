@@ -1,0 +1,27 @@
+{
+  "mongoconnect": "mongodb://127.0.0.1:27017/translatedb",
+  "port": 3000,
+  "latestTranslationsCount": 10,
+  "collectionName": "mobile_translations",
+  "testing": {
+    "newCutoffCount": 3,
+    "oldCutoffCount": 4,
+    "answerOptionsCount": 7,
+    "newWordsInTest": 10,
+    "midWordsInTest": 15,
+    "oldWordsInTest": 5
+  },
+  "default_locals": {
+    "title": "This is translator's default title",
+    "_layoutFile": "layout/page",
+    "default_layout": "layout/page",
+    "global_scripts": [
+      "/vendor/bower_components/jquery/dist/jquery.js",
+      "/vendor/bower_components/bootstrap/dist/js/bootstrap.js",
+      "/vendor/bower_components/angular/angular.min.js",
+      "/vendor/bower_components/angular-animate/angular-animate.min.js",
+      "/vendor/bower_components/underscore/underscore.js",
+      "/vendor/components/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title><%= title %></title>
+
+    <link rel='stylesheet' href='/vendor/bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/vendor/bower_components/fontawesome/css/font-awesome.min.css">
+
+    <% for(var idx in global_scripts) { -%>
+        <script src="<%- global_scripts[idx] %>"></script>
+    <% } -%>
+
+    <% for(var idx in local_scripts) { -%>
+        <script src="<%- local_scripts[idx] %>"></script>
+    <% } -%>
+
+</head>
+<body>
+
+<%- partial("partials/navbar.ejs") %>
+
+<p>&nbsp;</p>
+
+<div class="main_container">
+    <%- body %>
+</div>
+
+</body>
+</html>

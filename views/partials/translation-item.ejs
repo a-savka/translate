@@ -1,0 +1,9 @@
+<tr>
+    <td width="40%" class="translation_source"><span ng-bind="::translation.text"></span></td>
+    <td width="55%" class="translation_result"><span ng-repeat="t in translation.translate" ng-bind="::t"></span></td>
+    <td width="5%">
+        <button class="btn" type="button" ng-click="deleteTranslation(translation._id)" ng-disabled="translation.pendingRequest">
+            <i ng-class="getRemoveButtonIconClass(translation)"></i>
+        </button>
+    </td>
+</tr>

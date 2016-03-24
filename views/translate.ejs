@@ -1,0 +1,33 @@
+
+<div id="translatorApp" ng-controller="MainCtrl">
+
+    <div class="input-group has-success">
+        <span class="input-group-addon">Translate:</span>
+        <input class="form-control user_phone_name" type="text" placeholder="Enter text to translate here..." ng-model="source.text">
+        <span class="input-group-btn">
+          <button class="btn btn-success btn_save" type="button" ng-click="translate()" ng-disabled="!canTranslate()"><i ng-class="getTranslateIconClass()"></i>&nbsp;Translate</button>
+        </span>
+    </div>
+
+    <div class="recent_translations panel panel-default">
+
+        <div class="panel-heading">Recent Translations</div>
+
+        <translations-list translations="getTranslations()"></translations-list>
+        <loading active="loading"></loading>
+
+        <div class="panel-footer">
+            <div ng-show="canLoadMore()">
+                <button type="button" ng-click="loadTranslations()" class="btn-success btn"><i class="fa fa-arrow-down">
+                    </i>&nbsp;Show More&nbsp;<i class="fa fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/ng-template" id="tplTranslationsList"><%- partial("partials/translations-list.ejs")  %></script>
+    <script type="text/ng-template" id="tplTranslationItem"><%- partial("partials/translation-item.ejs")  %></script>
+
+</div>
+
