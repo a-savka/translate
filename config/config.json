@@ -2,7 +2,7 @@
   "mongoconnect": "mongodb://127.0.0.1:27017/translatedb",
   "port": 3000,
   "latestTranslationsCount": 10,
-  "collectionName": "mobile_translations",
+  "collectionName": "mobile_translations2",
   "testing": {
     "newCutoffCount": 3,
     "oldCutoffCount": 4,
